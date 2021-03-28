@@ -9,9 +9,12 @@ export default class Navigation extends Component {
     render() {
         return(
             <div>
-            <NavLink to="/home">Home</NavLink>
-            <NavLink to="/crm">Crm</NavLink>
+                <div>
+                    <NavLink to="/home">Home</NavLink>
+                    <NavLink to="/crm">Crm</NavLink>
+                </div>
 
+               
             </div>
         );
         }

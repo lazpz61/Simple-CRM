@@ -1,5 +1,7 @@
 import React from "react";
 
+// import Forms from "./inputs/forms";
+
 export default function home(){
         return (
         <div>
@@ -9,9 +11,14 @@ export default function home(){
                 <h1>Home Page</h1>
             </div>
 
-            <div classNAme="inputBoxes">
-                
+            <div classNAme="inputBoxes"> 
+                {/* <Forms /> */}
             </div>
+
+            <div>
+                <input type="text" />
+            </div>
+            
         </div>
         );
 }
