@@ -1,4 +1,6 @@
 import React from "react";
+import Home from "./home"
+
 
 export default function crm(props){
         return (
@@ -6,7 +8,7 @@ export default function crm(props){
                 <h1>Laz's Simple CRM Project</h1>
                 <h1>CRM Page</h1>
                 <div className="crmTable">
-                        <div className="employeeName">{props.name}</div>
+                <Home value={this.setState.props.value} />
                 </div>
         </div>
         
