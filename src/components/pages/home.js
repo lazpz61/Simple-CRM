@@ -1,5 +1,6 @@
-
 import React, {Component} from "react";
+import axios from 'axios';
+
 
 // import Forms from "./inputs/forms";
 
@@ -8,12 +9,30 @@ export default class Home extends Component{
         super(props);
         
         this.state = {
-            value: ''
+            value: ""
         };
 
-    
+        this.getPortfolioItems = this.getPortfolioItems.bind(this);
+
     }
+
+    getPortfolioItems(){
+        axios
+        .get("https://lazaroperez.devcamp.space/portfolio/portfolio_items")
+        .then(response => {
+          console.log("this is the response",response);
+        })
+        .catch(error => {
+          console.log("this is the error", error);
+        });
+      }
+
+// HandleChange 
+
+// HandleSubmit
+
     render(){
+        this.getPortfolioItems();
         return (
             <div>
                 <div className="heading">
@@ -28,8 +47,8 @@ export default class Home extends Component{
                 
                     <form>
                     <label>
-                        Employee Name
-                        <input type="text" value={this.state.value} />
+                        
+                        <input type="text"/>
                     </label>
                     
                     <input type="submit" value="Submit" />

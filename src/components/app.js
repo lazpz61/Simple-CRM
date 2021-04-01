@@ -7,11 +7,13 @@ import Home from "./pages/home";
 // import Forms from "./form/input-forms";
 
 export default class App extends Component {
-  constructor(){
-    super();
-  }
 
+  
+
+
+ 
   render() {
+    
     return (
       <div className='app'>
         
