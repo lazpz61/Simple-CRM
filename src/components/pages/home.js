@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import axios from 'axios';
+import Forms from "../inputs/forms"
+import HomeDisplay from "../homepage-container/home-display"
 
-
-// import Forms from "./inputs/forms";
 
 export default class Home extends Component{
     constructor(props){
@@ -20,7 +20,7 @@ export default class Home extends Component{
         axios
         .get("https://lazaroperez.devcamp.space/portfolio/portfolio_items")
         .then(response => {
-          console.log("this is the response",response);
+          this.setState({})
         })
         .catch(error => {
           console.log("this is the error", error);
@@ -35,24 +35,11 @@ export default class Home extends Component{
         this.getPortfolioItems();
         return (
             <div>
-                <div className="heading">
-                    <h1>Laz's Simple CRM Project</h1>
-                    <h1>Home Page</h1>
+                <HomeDisplay />
+                <div className="inputBoxes"> 
+                <Forms />
                 </div>
 
-                <div className="inputBoxes"> 
-                    {/* <Forms /> */}
-                 </div>
-
-                
-                    <form>
-                    <label>
-                        
-                        <input type="text"/>
-                    </label>
-                    
-                    <input type="submit" value="Submit" />
-                    </form>
             </div>
         );
     }

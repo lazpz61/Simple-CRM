@@ -13,10 +13,13 @@ export default class Forms extends Component {
     render(){
         return(
             <div>
+                <form>
                 <label>
                     Employee Name:
                 </label>
                 <input type="text" value={this.state.employee.employeeName}/>
+                <input type="submit" value="Submit" />
+                </form>
             </div>
         )
     }

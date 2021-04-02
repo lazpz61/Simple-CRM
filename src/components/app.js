@@ -16,17 +16,18 @@ export default class App extends Component {
     
     return (
       <div className='app'>
-        
+          
           <Router>
-             <Navigation />
+          
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/home" component={Home} />
               <Route path="/crm" component={Crm} />
             </Switch>
-           
             
             </Router>
+            <Navigation />
+            
       </div>
       
     
